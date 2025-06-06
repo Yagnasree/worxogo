@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Worxogo • Customer Stories</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-M9mZCrxB…==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --purple:#5B2BE0;--purple-dark:#4320a7;--gray:#5e5e5e;--light:#F7F8FC;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;line-height:1.5;color:var(--gray);background:var(--light)}
+    a{color:var(--purple-dark);text-decoration:none}
+
+    /* ─── HERO ─── */
+    header.hero{background:var(--purple);color:#fff;text-align:center;padding:4rem 1rem 5rem;overflow:hidden}
+    header.hero h1{font-size:2.5rem;font-weight:700;margin-bottom:.75rem}
+    header.hero p{font-size:1.125rem;font-weight:300;max-width:680px;margin:0 auto}
+    header.hero .cta{margin-top:2.5rem;display:inline-block;background:#fff;color:var(--purple-dark);
+                     padding:.9rem 2.2rem;border-radius:9999px;font-weight:600;transition:.25s}
+    header.hero .cta:hover{background:#eceefe}
+
+    /* ─── VIDEO GALLERY ─── */
+    .video-gallery{max-width:1180px;margin:-90px auto 4rem;padding:2rem 1rem;background:#fff;
+                   border-radius:1.5rem;box-shadow:0 28px 65px -25px rgba(0,0,0,.12)}
+    .video-gallery h2{text-align:center;font-size:1.6rem;font-weight:600;margin-bottom:1.5rem}
+    .videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.5rem}
+    .video-card{display:flex;flex-direction:column}
+    .video-card iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:.75rem}
+    .video-card figcaption{margin-top:.75rem;font-size:.9rem;font-weight:500;text-align:center;color:var(--gray)}
+
+    /* ─── FILTERS ─── */
+    .filters{max-width:1180px;margin:0 auto 2.5rem;display:flex;flex-wrap:wrap;gap:.75rem;padding:0 1rem}
+    .filters button{border:1px solid var(--purple);padding:.4rem 1.1rem;background:#fff;border-radius:30px;
+                    font-size:.875rem;font-weight:500;cursor:pointer;transition:.2s}
+    .filters button:hover,.filters button.active{background:var(--purple);color:#fff}
+
+    /* ─── TESTIMONIAL GRID ─── */
+    .grid{max-width:1180px;margin:0 auto 4rem;display:grid;
+          grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.75rem;padding:0 1rem}
+    .card{background:#fff;border-radius:1.25rem;padding:2.2rem 1.75rem;position:relative;
+          box-shadow:0 14px 30px -15px rgba(0,0,0,.1);transition:.3s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 26px 60px -20px rgba(0,0,0,.15)}
+    .card i{font-size:1.8rem;color:var(--purple)}
+    .card blockquote{margin:1.2rem 0 .9rem;font-size:.95rem}
+    .card h3{font-size:1.05rem;font-weight:600}
+    .card p.role{font-size:.85rem;font-weight:400;color:#7c7c7c}
+
+    /* ─── CTA STRIP ─── */
+    .cta-strip{background:var(--purple-dark);color:#fff;text-align:center;padding:4rem 1rem}
+    .cta-strip h2{font-size:1.85rem;font-weight:700;max-width:720px;margin:0 auto .8rem}
+    .cta-strip p{max-width:720px;margin:0 auto 2rem;font-size:1.05rem}
+    .cta-strip a{display:inline-block;background:#fff;color:var(--purple-dark);padding:.85rem 2.1rem;
+                 border-radius:9999px;font-weight:600;transition:.25s}
+    .cta-strip a:hover{background:#eceefe}
+
+    /* ─── SMALL SCREENS ─── */
+    @media(max-width:640px){
+      header.hero h1{font-size:2rem}
+      header.hero p{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>See How Leaders Win with Worxogo</h1>
+    <p>From EXL to Genpact, global brands rely on personalized nudges to smash their productivity and sales goals.</p>
+    <a href="#grid" class="cta">Browse Stories</a>
+  </header>
+
+  <!-- VIDEO GALLERY -->
+  <section class="video-gallery" aria-labelledby="video-gallery-title">
+    <h2 id="video-gallery-title">Customer Spotlight Videos</h2>
+    <div class="videos">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/-MyO2EvOCZQ"
+                title="Customer spotlight – Field Productivity"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <figcaption>How Nudge-led Coaching Transformed Field Productivity</figcaption>
+      </div>
+      <!-- Video 2 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/tcPEHpWG67o"
+                title="Driving 28 % Uplift in Daily Sales"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        <figcaption>Driving 28 % Uplift in Daily Sales Performance</figcaption>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER CHIPS -->
+  <div class="filters" aria-label="Filter testimonials">
+    <button class="active" onclick="filterCards('all')">All</button>
+    <button onclick="filterCards('bpo')">BPO</button>
+    <button onclick="filterCards('pharma')">Pharma</button>
+    <button onclick="filterCards('banking')">Banking</button>
+    <button onclick="filterCards('manufacturing')">Manufacturing</button>
+  </div>
+
+  <!-- TESTIMONIAL GRID -->
+  <section class="grid" id="grid">
+    <!-- Card 1 -->
+    <article class="card" data-segment="bpo">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        For us it’s a single platform where we manage the entire workforce in real time – the dashboards &amp; reports are user-friendly and those nudges really help drive performance.
+      </blockquote>
+      <h3>Smriti Agarwal</h3>
+      <p class="role">VP, Transport &amp; Logistics · EXL</p>
+    </article>
+
+    <!-- Card 2 -->
+    <article class="card" data-segment="pharma">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        The ability to remotely nudge a rep based on what motivates him is very empowering. This platform provided real-time personalized coaching to the reps.
+      </blockquote>
+      <h3>Sumeet Chandna</h3>
+      <p class="role">Head of Digital Transformation · Cipla India</p>
+    </article>
+
+    <!-- Card 3 -->
+    <article class="card" data-segment="bpo">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        Performance usually flattens after reaching peaks. Worxogo’s tools helped us elevate service levels and sales to exceed targets.
+      </blockquote>
+      <h3>George Johny</h3>
+      <p class="role">Global Head – BD · Sutherland Global Services</p>
+    </article>
+
+    <!-- Card 4 -->
+    <article class="card" data-segment="banking">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        Nudges and the behavioral aspect are a powerful tool to motivate the front-line salesforce effectively. Refinement of nudges in a digital world is a force multiplier.
+      </blockquote>
+      <h3>Narendra Ganpule</h3>
+      <p class="role">Ex-Head Strategy &amp; Digital · HDFC</p>
+    </article>
+
+    <!-- Card 5 -->
+    <article class="card" data-segment="manufacturing">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        Over time the AI engine assessed key motivations and provided relevant nudges to drive performance. This drove behaviors, improved performance and led to better productivity.
+      </blockquote>
+      <h3>Anand Santhanam</h3>
+      <p class="role">Ex VP, Marketing &amp; BD · TAFE</p>
+    </article>
+
+    <!-- Card 6 -->
+    <article class="card" data-segment="retail">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        Managers who are and will be successful need newer ways to manage their teams – a true multi-dimensional approach.
+      </blockquote>
+      <h3>Saumen Bhaumik</h3>
+      <p class="role">CEO Eyewear Division · Titan</p>
+    </article>
+
+    <!-- Card 7 -->
+    <article class="card" data-segment="realestate">
+      <i class="fas fa-quote-left" aria-hidden="true"></i>
+      <blockquote>
+        We’re seeing big changes in quality efforts. There’s been significant improvement on the behavioral aspects that were our pain points.
+      </blockquote>
+      <h3>Pawan Agarwal</h3>
+      <p class="role">Director · NK Realtors</p>
+    </article>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <h2>Ready to See Worxogo in Action?</h2>
+    <p>Join leading enterprises already nudging 100 000+ frontline reps every day.</p>
+    <a href="https://www.worxogo.com/#demo" target="_blank" rel="noopener">Book a demo</a>
+  </section>
+
+  <!-- FILTER LOGIC -->
+  <script>
+    function filterCards(seg){
+      document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));
+      Array.from(document.querySelectorAll('.filters button')).find(b=>b.textContent.toLowerCase()===(seg==='all'?'all':seg)).classList.add('active');
+      document.querySelectorAll('.card').forEach(card=>{
+        card.style.display = (seg==='all'||card.dataset.segment===seg) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+</body>
+</html>

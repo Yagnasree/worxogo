@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Performance Hub – Worxogo</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-he8oA7F9GhokWZtv3Bn4RvVAKLiV2fX+RrDCfK7EJX+zSoh5Z+ugIQLhcElSQL45G+TqxzFklGfNWnvZfV45eA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <style>
+    :root {
+      --primary: #4f46e5; /* indigo */
+      --secondary: #0f172a; /* slate-900 */
+      --accent:  #facc15;  /* amber-400 */
+      --bg:      #ffffff;
+      --text:    #1e293b;
+      --surface: #f8fafc;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a     { color: var(--primary); text-decoration: none; }
+    img   { width: 100%; height: auto; display: block; border-radius: 1rem; }
+    h1,h2,h3,h4 { margin: 0 0 .5rem 0; line-height: 1.25; font-weight: 700; }
+
+    /* Layout helpers */
+    .container { width: 92%; max-width: 1280px; margin-inline: auto; }
+    .section   { padding: 4rem 0; display: flex; gap: 3rem; flex-wrap: wrap; align-items: center; }
+    .section:nth-child(even) { flex-direction: row-reverse; }
+    .section__media { flex: 1 1 450px; min-width: 300px; }
+    .section__content { flex: 1 1 450px; }
+    .section__content p { margin-bottom: 1.25rem; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      padding: 6rem 0 5rem;
+      text-align: center;
+      background: radial-gradient(110% 90% at 50% -10%, rgba(79,70,229,.25) 0%, transparent 70%);
+      overflow: hidden;
+    }
+    .hero h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); }
+    .hero h2 { font-size: clamp(1.15rem, 2.3vw, 1.35rem); font-weight: 500; color: var(--secondary); margin-bottom: 2rem; }
+    .hero__cta {
+      display: inline-flex; align-items: center; gap:.75rem;
+      padding:.9rem 1.8rem; border-radius: 999px;
+      background: var(--primary); color:#fff; font-weight:600; font-size:1rem;
+      box-shadow: 0 5px 20px -5px rgba(79,70,229,.45); transition: .25s ease-out;
+    }
+    .hero__cta:hover { transform: translateY(-2px); box-shadow: 0 8px 28px -6px rgba(79,70,229,.55); }
+
+    /* Callout chips */
+    .chip {
+      display:inline-flex; align-items:center; gap:.4rem;
+      font-size:.78rem; font-weight:600; letter-spacing:.03em;
+      padding:.45rem .9rem; border-radius:999px; background:var(--surface); color:var(--primary);
+    }
+
+    /* Feature highlight cards */
+    .highlight-list { display:grid; gap:1rem; }
+    .highlight-item {
+      display:flex; align-items:flex-start; gap:1rem;
+      background:var(--surface); padding:1rem 1.25rem; border-radius:1rem;
+    }
+    .highlight-item i {
+      flex:none; width:42px; height:42px;
+      display:grid; place-content:center;
+      border-radius:50%; background:var(--primary);
+      color:#fff; font-size:1.05rem;
+    }
+
+    /* Noticeboard grid for banners & notices */
+    .notice-grid { display:grid; gap:1.5rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .notice-card {
+      background: var(--surface); border-radius: 1rem; padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    }
+
+    /* Footer */
+    footer { text-align:center; padding:4rem 0 3rem; font-size:.9rem; color:var(--secondary); }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .section   { flex-direction: column; }
+      .section:nth-child(even) { flex-direction: column; }
+      .section__media, .section__content { flex:1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="top">
+    <div class="container">
+      <h1>Performance Hub</h1>
+      <h2>Productivity&nbsp;on&nbsp;Autopilot</h2>
+      <p style="max-width:600px;margin:0 auto 2.25rem;">
+        Nudges spark action—<b>worxogo Nudge Coach</b> does much more. It creates a motivating ecosystem where your teams don’t just know what to do—they <em>want</em> to do it.
+      </p>
+      <a href="#video" class="hero__cta">
+        <i class="fa-solid fa-circle-play"></i> See it in action
+      </a>
+    </div>
+  </header>
+
+
+  <!-- ============ POINTS ============ -->
+  <section class="section" id="points">
+    <div class="section__content">
+      <span class="chip"><i class="fa-solid fa-gem"></i> Points to Prioritize</span>
+      <h2 style="margin-top:1rem;">Turn business priorities into daily actions</h2>
+      <p>
+        Every action earns points based on its alignment to performance goals. These aren’t just scores; they’re visual signals that help employees quickly understand which KPIs carry more weight—guiding effort toward high-impact work.
+      </p>
+      <p>
+        Leaders get instant clarity and shared direction—everyone’s energy flows toward the objectives that matter most.
+      </p>
+    </div>
+    <div class="section__media">
+      <img src="Images/zonewithdata.png" alt="Points system illustration" />
+    </div>
+  </section>
+
+  <!-- ============ BADGES ============ -->
+  <section class="section" id="badges">
+    <div class="section__content">
+      <span class="chip"><i class="fa-solid fa-award"></i> Badges that Build</span>
+      <h2 style="margin-top:1rem;">Reinforce the right behaviours, not just results</h2>
+      <p>
+        Crossing milestones, showing consistency, or hitting goals triggers automatic badge celebrations—micro-moments of recognition that snowball into momentum and lasting habits.
+      </p>
+      <p>
+        According to Gallup, employees who receive regular recognition are <b>4×</b> more engaged and <b>21 % more productive</b>.
+      </p>
+    </div>
+    <div class="section__media">
+      <img src="Images/badges.png" alt="Badge celebration mockup" />
+    </div>
+  </section>
+
+  <!-- ============ LEADERBOARD ============ -->
+  <section class="section" id="leaderboard">
+    <div class="section__content">
+      <span class="chip"><i class="fa-solid fa-ranking-star"></i> Leaderboard</span>
+      <h2 style="margin-top:1rem;">Context beyond competition</h2>
+      <p>
+        The leaderboard makes performance transparent—overall and KPI-by-KPI. Reps self-correct, managers spot trends and coach in real time, and senior leaders get a birds-eye view of entire business units at a glance.
+      </p>
+      <ul class="highlight-list">
+        <li class="highlight-item"><i class="fa-solid fa-eye"></i><span>Instant visibility into upward or downward momentum</span></li>
+        <li class="highlight-item"><i class="fa-solid fa-lightbulb"></i><span>Data-driven coaching cues for managers</span></li>
+        <li class="highlight-item"><i class="fa-solid fa-trophy"></i><span>Celebrates peer-level wins, driving healthy competition</span></li>
+      </ul>
+    </div>
+    <div class="section__media">
+      <img src="Images/leaderboard.png" alt="Leaderboard user interface" />
+    </div>
+  </section>
+
+  <!-- ============ QUIZ / MICRO-LEARNING ============ -->
+  <section class="section" id="quiz">
+    <div class="section__content">
+      <span class="chip"><i class="fa-solid fa-circle-question"></i> Quiz</span>
+      <h2 style="margin-top:1rem;">Fast, focused learning for busy teams</h2>
+      <p>
+        Short, under-2-minute quizzes land right inside the flow of work. Create them fast, track participation, and reinforce knowledge through repetition—not lectures.
+      </p>
+      <ul class="highlight-list">
+        <li class="highlight-item"><i class="fa-solid fa-gauge-high"></i><span>No complex setup or reporting tools</span></li>
+        <li class="highlight-item"><i class="fa-solid fa-bell"></i><span>Nudges drive participation &amp; overcome resistance</span></li>
+        <li class="highlight-item"><i class="fa-solid fa-chart-line"></i><span>Drill into performance by individual, team, or over time</span></li>
+      </ul>
+    </div>
+    <div class="section__media">
+      <img src="Images/quiz.png" alt="In-app quiz illustration" />
+    </div>
+  </section>
+
+  <!-- ============ BANNERS & NOTICEBOARD ============ -->
+  <section class="section" id="noticeboard">
+    <div class="section__content">
+      <span class="chip"><i class="fa-solid fa-bullhorn"></i> Banners &amp; Noticeboard</span>
+      <h2 style="margin-top:1rem;">Recognition &amp; reach where work happens</h2>
+      <p>
+        From celebrating “Performer of the Week” to sharing CEO shout-outs or process updates, Banners and Noticeboards keep everyone in the loop—visually, publicly, and without email overload.
+      </p>
+      <p>Upload videos, PDFs, or images to amplify internal comms right inside the app.</p>
+    </div>
+    <div class="section__media">
+      <div class="notice-grid">
+        <div class="notice-card">
+          <h4><i class="fa-solid fa-star" style="color:var(--accent);"></i> Performer of the Week</h4>
+          <p>Congrats to <b>Alex Fernandez</b> for leading the Q2 pilot wins!</p>
+        </div>
+        <div class="notice-card">
+          <h4><i class="fa-solid fa-bullseye" style="color:var(--primary);"></i> Sprint 5 Kick-off</h4>
+          <p>All squads: check the new process doc uploaded in the Playbook.</p>
+        </div>
+        <div class="notice-card">
+          <h4><i class="fa-solid fa-video" style="color:var(--secondary);"></i> Product Demo Video</h4>
+          <p>Watch the latest <em>v2.1</em> feature tour—now live.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECONDARY CTA ============ -->
+  <section class="section" style="padding-block:5rem 6rem; text-align:center;">
+    <div class="container">
+      <h2>Ready to put productivity on autopilot?</h2>
+      <p style="max-width:640px;margin-inline:auto;">
+        Discover how Performance Hub weaves feedback, recognition, learning and analytics into one seamless experience that your teams <em>love</em> to use.
+      </p>
+      <a href="#top" class="hero__cta">
+        <i class="fa-solid fa-circle-play"></i> Book a live demo
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    © 2025 Worxogo Solutions. All rights reserved.
+  </footer>
+
+</body>
+</html>

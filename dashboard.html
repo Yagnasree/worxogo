@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Behavior Intelligence Dashboard | worxogo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* ---------- Root & Reset ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #1b1e28; background-color: #f9fafc; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { font-weight: 700; }
+    :root {
+      --clr-primary: #0958ff;
+      --clr-secondary: #01bfa6;
+      --clr-danger: #ff4d4f;
+      --clr-warning: #faad14;
+      --clr-success: #52c41a;
+      --gradient: linear-gradient(135deg, #0958ff 0%, #01bfa6 100%);
+      --radius: 1.2rem;
+    }
+
+    /* ---------- Utility ---------- */
+    .container { width: min(90%, 1120px); margin-inline: auto; }
+    .section { padding: 4rem 0; }
+    .text-center { text-align: center; }
+    .btn {
+      display: inline-block; padding: .9rem 2.2rem; border-radius: 6rem; background: var(--clr-primary); color: #fff; font-weight: 600; transition: .3s;
+    }
+    .btn:hover { opacity: .9; transform: translateY(-2px); }
+
+    /* ---------- Hero ---------- */
+    .hero { background: var(--gradient); color: #fff; padding: 6rem 0 5rem; position: relative; overflow: hidden; }
+    .hero h1 { font-size: clamp(2.4rem, 5vw, 3.4rem); margin-bottom: 1rem; }
+    .hero p { font-size: 1.125rem; max-width: 640px; margin-inline: auto 1.8rem auto; }
+
+    /* ---------- Zone Snapshot ---------- */
+    .zone-wrapper { display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; }
+    .zone-img { flex: 1 1 450px; min-width: 450px; }
+    .zone-content { flex: 2 1 380px; }
+    .zone-content h2 { margin-bottom: .75rem; }
+
+    /* ---------- Behavior Grid ---------- */
+    .behaviors-grid { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); margin-top: 2.5rem; }
+    .behavior-card {
+      background: #fff; border-radius: var(--radius); box-shadow: 0 12px 25px rgba(25,42,70,.08); overflow: hidden; transition: .35s; position: relative;
+    }
+    .behavior-card:hover { transform: translateY(-8px); box-shadow: 0 18px 36px rgba(25,42,70,.12); }
+    .behavior-card img { height: 220px; object-fit: cover; width: 100%; }
+    .behavior-body { padding: 1.5rem; }
+    .behavior-body h3 { margin-bottom: .5rem; font-size: 1.25rem; }
+    .behavior-body p { font-size: .95rem; }
+
+    /* ---------- Manager Section ---------- */
+    .manager-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px,1fr)); gap: 3rem; align-items: center; }
+    .manager-content h2 { margin-bottom: 1rem; }
+    .manager-content ul { list-style: none; }
+    .manager-content li { margin-bottom: .75rem; padding-left: 1.1rem; position: relative; font-size: .98rem; }
+    .manager-content li::before { content: '\f058'; font-family: 'Font Awesome 6 Free'; font-weight: 900; color: var(--clr-primary); position: absolute; left: 0; }
+
+    /* ---------- CTA Banner ---------- */
+    .cta-banner { background: var(--clr-primary); color: #fff; border-radius: var(--radius); padding: 3rem clamp(1rem, 5vw, 3rem); display: flex; flex-direction: column; align-items: center; gap: 1.2rem; text-align: center; }
+
+    /* ---------- Responsive ---------- */
+    @media(max-width: 768px){
+      .hero { padding: 4rem 0 3rem; }
+      .zone-wrapper { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ========== HERO ========= -->
+  <section class="hero text-center">
+    <div class="container">
+      <h1>Performance Intelligence Dashboard</h1>
+      <p>Instantly identify what drives frontline performance—then coach every individual & manager to action.</p>
+      <a href="#demo" class="btn">See it in Action</a>
+    </div>
+  </section>
+
+  <!-- ========== ZONE SNAPSHOT ========= -->
+  <section class="section zone" id="snapshot">
+    <div class="container zone-wrapper">
+      <div class="zone-img">
+        <img src="Images/zonewithdata.png" alt="Red Amber Green Snapshot" />
+      </div>
+      <div class="zone-content">
+        <h2>One‑Glance Performance Zone</h2>
+        <p>The colored band (Red • Amber • Green) gives reps an at‑a‑glance view of their current standing—motivating immediate corrective action or reinforcement.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BEHAVIOR GRID ========= -->
+  <section class="section behaviors" id="behaviors">
+    <div class="container text-center">
+      <h2>4 Core Behaviors We Drive</h2>
+      <p class="subhead" style="max-width:680px;margin:0.8rem auto 2.2rem;">Every KPI in our engine is mapped to a fundamental behavior—so coaching is precise, contextual, and habit‑forming.</p>
+      <div class="behaviors-grid">
+        <!-- Target -->
+        <div class="behavior-card">
+          <img src="Images/target.png" alt="Target KPI" />
+          <div class="behavior-body">
+            <h3>Goal Orientation</h3>
+            <p>Clear targets fuel a progress‑driven mindset—reinforcing direction and momentum to hit, stretch, repeat.</p>
+          </div>
+        </div>
+        <!-- Range -->
+        <div class="behavior-card">
+          <img src="Images/range.png" alt="Range KPI" />
+          <div class="behavior-body">
+            <h3>Self‑Awareness</h3>
+            <p>Color‑coded benchmarks spark healthy comparison and illuminate what "good" really looks like.</p>
+          </div>
+        </div>
+        <!-- Quantity -->
+        <div class="behavior-card">
+          <img src="Images/quantity.png" alt="Quantity KPI" />
+          <div class="behavior-body">
+            <h3>Intrinsic Drive</h3>
+            <p>Continuous effort is rewarded—fostering habit loops that celebrate volume and consistency.</p>
+          </div>
+        </div>
+        <!-- Adherence -->
+        <div class="behavior-card">
+          <img src="Images/adherence.png" alt="Adherence KPI" />
+          <div class="behavior-body">
+            <h3>Compliance & Adherence</h3>
+            <p>Daily thresholds and nudges lock in disciplined execution and process fidelity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MANAGER DASHBOARD ========= -->
+  <section class="section manager" id="manager-view" style="background:#fff;">
+    <div class="container manager-wrapper">
+      <div class="manager-img">
+        <img src="Images/managerdashboard.png" alt="Manager People‑View Dashboard" />
+      </div>
+      <div class="manager-content">
+        <h2>Manager Performance Dashboard</h2>
+        <p>Beyond individual metrics, managers need a people‑view to coach effectively. Our manager dashboard aggregates behavior zones across the team—making it simple to prioritize interventions.</p>
+        <ul>
+          <li>Real‑time tally of reps in Red, Amber, Green zones.</li>
+          <li>Drill‑down from macro view to specific behavior and KPI.</li>
+          <li>Suggested coaching actions auto‑generated for each segment.</li>
+          <li>Alerts when too many reps slip into risk zones.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========= -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 style="font-size:1.8rem;">Ready to see behavior change in action?</h2>
+        <a href="/demo" class="btn" style="background:#fff;color:var(--clr-primary);">Book a Demo</a>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

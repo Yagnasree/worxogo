@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Nudges – Worxogo</title>
+  <style>
+    :root {
+      --primary: #4f46e5; /* indigo */
+      --secondary: #0f172a; /* slate-900 */
+      --accent:   #facc15;  /* amber-400 */
+      --bg:       #ffffff;
+      --text:     #1e293b;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky; top: 0; z-index: 40;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: saturate(180%) blur(12px);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .nav {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+    .nav a { color: var(--secondary); text-decoration: none; margin-left: 1.25rem; font-weight: 500; }
+    .btn { padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; transition: background 0.2s; }
+    .btn-primary { background: var(--primary); color:#fff; }
+    .btn-primary:hover { background:#4338ca; }
+    .hero {
+      text-align: center;
+      padding: 5rem 1rem 3.5rem;
+      background: linear-gradient(135deg,#eef2ff 0%,#e0e7ff 100%);
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--secondary); }
+    .hero p  { max-width: 620px; margin: 0 auto 2rem; font-size: 1.125rem; }
+    section  { max-width: 940px; margin: 0 auto; padding: 3rem 1rem; }
+    h2 { font-size: 1.75rem; margin-bottom: 1rem; color: var(--secondary); }
+    h3 { font-size: 1.25rem; margin: 1.5rem 0 0.75rem; color: var(--primary); }
+    .grid   { display: grid; gap: 1.5rem; }
+    .grid-2 { grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
+    .card {
+      background:#f8fafc; border-radius:10px;
+      padding:1.5rem; box-shadow:0 2px 6px rgba(0,0,0,0.04);
+    }
+    .callout {
+      background: var(--secondary); color:#fff;
+      padding:2.5rem 1.25rem; text-align:center;
+      border-radius:12px; margin-bottom:4rem;
+    }
+    .callout h2 { color:#fff; margin-bottom:0.75rem; }
+    footer { background:#f1f5f9; padding:2rem 1rem; }
+    .footer-inner {
+      max-width:940px; margin:0 auto;
+      display:flex; justify-content:space-between; flex-wrap:wrap; gap:1rem;
+    }
+    .footer-inner p { margin:0; }
+    @media (min-width:768px){
+      .hero h1{font-size:3rem;} h2{font-size:2rem;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="nav">
+      <div><strong>Worxogo</strong></div>
+      <div>
+        <a href="#what-is-nudge">What is a Nudge?</a>
+        <a href="#ai-nudge">AI Nudge</a>
+        <a href="#building-blocks">Building Blocks</a>
+        <a href="#anatomy">Inside a Nudge</a>
+      </div>
+      <div>
+        <a href="#contact" class="btn btn-primary">Talk to an Expert</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>From Insight to Action: How AI Nudges Drive Daily Behavior Change</h1>
+    <p>Every day, Worxogo’s Nudge Coach sends thousands of AI-powered nudges that help employees focus, act, and grow. But what exactly is a nudge—and how does it work?</p>
+    <div>
+      <a href="#contact" class="btn btn-primary">Request a Demo</a>
+      <a href="#what-is-nudge" class="btn" style="margin-left:0.75rem;">Learn More</a>
+    </div>
+  </section>
+
+  <!-- What is a Nudge -->
+  <section id="what-is-nudge">
+    <h2>Nudge: The Tiny Rudder Steering Your Day</h2>
+    <p>Popularised by Nobel laureate Richard Thaler and Cass Sunstein, <strong>Nudge</strong> is a term from Behavioral Economics. A nudge is a gentle push, a suggestion almost. A subtle prompt that guides behavior in a desired direction.</p>
+    <p>Just a little signal. A little steer. Tiny cue. Timed right. Big shift.</p>
+    <img src="nudge.png" alt="Illustration of a behavioral nudge" style="max-width:50%;height:auto;margin-top:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04);" loading="lazy">
+  </section>
+
+  <!-- AI Nudge (updated with algorithm emphasis) -->
+  <section id="ai-nudge">
+    <h2>Worxogo&nbsp;Nudge Engine <span style="font-size:0.75em;color:var(--accent);">— Powered by AI</span></h2>
+    <p><em>Keeping every employee on-track, one smart nudge at a time.</em> The engine delivers short, personalised nudges that guide employees toward their targets—without adding extra work for managers.</p>
+
+    <h3 style="margin-top:2rem;color:var(--secondary);">Why it’s <strong>AI</strong>, not just automation</h3>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3 style="margin:0 0 0.5rem;color:var(--primary);">Choice Architecture</h3>
+        <p>Multi-factor algorithm ranks gap-to-target, business importance, trend velocity, and seasonality to surface the single highest-impact KPI to nudge.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.5rem;color:var(--primary);">Bayesian Style Selector</h3>
+        <p>Dynamically updates the probability that <em>Loss Aversion</em>, <em>Curiosity</em>, <em>Authority</em>, etc. will spark action for <em>this</em> user in <em>this</em> context.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.5rem;color:var(--primary);">Hill-Climbing Optimiser</h3>
+        <p>Reinforcement-learning loop that A/B tests micro-changes and keeps only those raising click-throughs or task completion.</p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 0.5rem;color:var(--primary);">NLG Message Generator</h3>
+        <p>Large-language-model layer rewrites the chosen frame in the employee’s preferred tone—formal, coaching, or friendly—in milliseconds.</p>
+      </div>
+    </div>
+
+    <ul style="margin-top:1.5rem; list-style: disc inside;">
+      <li><strong>📈 Higher engagement</strong> with fewer messages</li>
+      <li><strong>🎯 Measurable lifts</strong> in KPI achievement</li>
+      <li><strong>🤖 Self-tuning</strong> system—no manual rule-setting</li>
+    </ul>
+  </section>
+
+  <!-- Building Blocks -->
+  <section id="building-blocks">
+    <h2>Crafted for Action: The 3 Building Blocks of Every Effective Nudge</h2>
+    <p>Every AI nudge is designed to do one thing: <strong>drive action</strong>. Behind these effective nudges lies a mix of three powerful forces—drawn from game design, social psychology, and behavioral science. Together, they turn a simple prompt into a call you can’t ignore.</p>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Game Mechanics</h3>
+        <p>Points. Badges. Leaderboards. They tap into intrinsic motivators like mastery, achievement, and challenge, helping employees stay focused and invested in their progress.<br />Because who doesn’t want to win at work?</p>
+      </div>
+      <div class="card">
+        <h3>Social Mechanics</h3>
+        <p>People are influenced by the actions of others. These nudges use social cues—peer performance, social proof, and community to create a sense of shared momentum.<br />Because no one is an island. Especially at work.</p>
+      </div>
+      <div class="card">
+        <h3>Persuasive Mechanics</h3>
+        <p>Rooted in behavioral science, these nudges apply principles like <a href="#" title="Read about curiosity">Curiosity</a>, <a href="#" title="Read about Loss Aversion">Loss Aversion</a>, and <a href="#" title="Read about Peak End rule">Peak End Rule</a>. They shape the way decisions are presented, making the right action feel easier and more intuitive—without forcing it.<br />Smart guidance that feels just right for you. Because it is.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">Together? They’re the secret sauce behind every hyper-personalized nudge that actually works. <a href="#contact">See the impact →</a></p>
+  </section>
+
+  <!-- Anatomy of a Nudge -->
+  <section id="anatomy">
+    <h2>What You See in a Nudge—and What It’s Doing Behind the Scenes</h2>
+    <img src="bird nudge.png" alt="bird nudge" style="max-width:50%;height:auto;margin-top:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.04);" loading="lazy">
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Prioritization</h3>
+        <p><em>“Today’s focus should be to get 3 Promoter scores...”</em><br />Cuts through the noise to guide attention to what matters most today.</p>
+      </div>
+      <div class="card">
+        <h3>Social Norming</h3>
+        <p><em>“Half of your colleagues are at 60%”</em><br />Creates subtle social pressure by showing peer performance—nudging you to catch up or stay ahead.</p>
+      </div>
+      <div class="card">
+        <h3>Progress Visualization</h3>
+        <p><em>“...and get closer to your team”</em><br />Shows how today’s effort connects to a bigger goal or team progress—giving the action meaning.</p>
+      </div>
+      <div class="card">
+        <h3>Call for Action</h3>
+        <p><em>“CHECK DASHBOARD”</em><br />A clear, low-friction next step nudges the user toward taking action—right now.</p>
+      </div>
+    </div>
+    <p style="margin-top:2rem;">Each of these elements taps into behavioral science to shape decision-making—without force, just a well-timed nudge.</p>
+  </section>
+
+  <!-- Callout CTA -->
+  <section class="callout" id="contact">
+    <h2>Ready to see AI Nudges in action?</h2>
+    <p>Book a 15-minute walkthrough and discover how hyper-personalised nudges can lift your team’s performance—starting tomorrow.</p>
+    <a href="mailto:sales@worxogo.com" class="btn btn-primary" style="margin-right:0.75rem;">Request Demo</a>
+    <a href="https://www.worxogo.com/contact" class="btn">Contact Sales</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>© 2025 Worxogo. All rights reserved.</p>
+      <p><a href="/security" style="text-decoration:none;color:var(--secondary);">Security &amp; Privacy</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sales Solution | Worxogo Nudge Coach</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-4oVHQ2UVqHL0l7OrXjo6xoZ7lpiZznLSDvV1HaYALPjW++0W4gsJEogDeIkvzytXuhHhym1IExXEUPXZG4O3GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary:#4245ff;
+      --primary-dark:#2d2fc2;
+      --secondary:#f5f7ff;
+      --accent:#ff8c42;
+      --text:#1b1c2e;
+      --text-light:#50526b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Inter',sans-serif;color:var(--text);line-height:1.5;background:#fff}
+    a{text-decoration:none;color:inherit}
+    section{padding:4rem 1rem;max-width:1100px;margin:auto}
+    h1,h2,h3{font-weight:700;line-height:1.25;margin-bottom:1rem}
+    h1{font-size:clamp(2rem,4vw,3rem)}
+    h2{font-size:clamp(1.5rem,3vw,2.25rem)}
+    h3{font-size:1.25rem}
+    p{margin-bottom:1rem;color:var(--text-light)}
+    .btn{display:inline-block;background:var(--primary);color:#fff;padding:.85rem 2rem;border-radius:8px;font-weight:600;transition:.25s}
+    .btn:hover{background:var(--primary-dark)}
+    /* Hero */
+    .hero{position:relative;text-align:center;padding-top:6rem}
+    .hero-sub{max-width:650px;margin:1rem auto 2.5rem}
+    .video-placeholder{position:relative;width:100%;max-width:780px;height:430px;margin:2rem auto;border-radius:18px;background:url('https://dummyimage.com/780x430/ced2ff/333&text=Product+Video') center/cover}
+    .video-placeholder::after{content:'\f04b';font-family:'Font Awesome 6 Free';font-weight:900;color:#fff;font-size:4rem;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:.9}
+    /* Logo bar */
+    .logo-bar{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem}
+    .logo-bar img{height:48px;filter:grayscale(100%);opacity:.8;transition:.3s}
+    .logo-bar img:hover{filter:none;opacity:1}
+    /* Pain cubes */
+    .pain-grid{display:grid;gap:2rem;margin-top:2rem}
+    @media(min-width:768px){.pain-grid{grid-template-columns:repeat(2,1fr)}}
+    .pain-card{background:var(--secondary);padding:2rem;border-radius:14px;display:flex;gap:1rem}
+    .pain-card i{font-size:1.5rem;color:var(--primary);flex-shrink:0}
+    /* Benefit cards */
+    .benefit-grid{display:grid;gap:2rem;margin-top:2rem}
+    @media(min-width:768px){.benefit-grid{grid-template-columns:repeat(3,1fr)}}
+    .benefit-card{padding:2rem;border:1px solid #e6e8ff;border-radius:14px;transition:.3s}
+    .benefit-card:hover{box-shadow:0 4px 22px -8px rgba(66,69,255,.25)}
+    .benefit-card i{font-size:1.75rem;color:var(--accent);margin-bottom:1rem}
+    /* Callout */
+    .callout{background:var(--primary);color:#fff;padding:3rem 2rem;border-radius:18px;text-align:center}
+    .callout h2{color:#fff;margin-bottom:1rem}
+    /* Metrics */
+    .metrics-grid{display:grid;gap:2rem;margin-top:2rem}
+    @media(min-width:768px){.metrics-grid{grid-template-columns:repeat(2,1fr)}}
+    .metric-card{background:var(--secondary);border-radius:14px;padding:2rem;text-align:center}
+    .metric-card h3{font-size:2.5rem;margin-bottom:.5rem;color:var(--primary)}
+    /* Case study */
+    .case-study{display:flex;flex-direction:column;gap:1.5rem;align-items:flex-start}
+    .case-study a{color:var(--primary);font-weight:600}
+    /* Sticky CTA */
+    .sticky-cta{position:fixed;bottom:20px;right:20px;z-index:999}
+    .sticky-cta .btn{box-shadow:0 4px 18px -4px rgba(66,69,255,.4)}
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <h1>Drive consistent sales performance at&nbsp;scale—without chasing reps.</h1>
+    <p class="hero-sub">Guide reps to action, every day. No micromanagement. Just consistent execution.</p>
+    <a href="#how-it-works" class="btn">See how it works</a>
+
+    <div class="video-placeholder" aria-label="Product walkthrough video placeholder"></div>
+
+    <div class="logo-bar" aria-label="Client industry logos">
+      <img src="https://dummyimage.com/150x48/ddd/333&text=ClientLogo1" alt="Logo1">
+      <img src="https://dummyimage.com/150x48/ddd/333&text=ClientLogo2" alt="BFSI">
+      <img src="https://dummyimage.com/150x48/ddd/333&text=ClientLogo3" alt="Logistics">
+      <img src="https://dummyimage.com/150x48/ddd/333&text=ClientLogo4" alt="Retail">
+      <img src="https://dummyimage.com/150x48/ddd/333&text=ClientLogo5" alt="Insurance">
+    </div>
+  </section>
+
+  <!-- Pain points -->
+  <section id="pain">
+    <h2>Scaling sales is hard. Especially when...</h2>
+    <div class="pain-grid">
+      <div class="pain-card"><i class="fa-solid fa-chart-line-down"></i><div>
+        <h3>Reps stall mid‑month</h3>
+        <p>Activity dips, momentum slows—and pipeline coverage’s off before month‑end targets.</p>
+      </div></div>
+      <div class="pain-card"><i class="fa-solid fa-file-chart-column"></i><div>
+        <h3>Managers are stuck in reporting</h3>
+        <p>Hours spent tracking dashboards means less coaching; low performers stay stuck.</p>
+      </div></div>
+      <div class="pain-card"><i class="fa-solid fa-person-chalkboard"></i><div>
+        <h3>Training doesn’t stick</h3>
+        <p>Your team forgets key messages in days—leading to inconsistent pitches and missed upsells.</p>
+      </div></div>
+      <div class="pain-card"><i class="fa-solid fa-toolbox"></i><div>
+        <h3>Digital tools go unused</h3>
+        <p>You invested in sales tech, but reps skip the assets—losing chances to sell smarter.</p>
+      </div></div>
+      <div class="pain-card"><i class="fa-solid fa-battery-quarter"></i><div>
+        <h3>Motivation fizzles</h3>
+        <p>Even good reps drift without timely nudges—focus fades and performance follows.</p>
+      </div></div>
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section id="how-it-works">
+    <h2>How worxogo helps</h2>
+    <p>Daily nudges. Zero micromanagement. Measurable results.</p>
+    <div class="benefit-grid">
+      <div class="benefit-card"><i class="fa-solid fa-bolt"></i>
+        <h3>Drive consistent activity</h3>
+        <p>Nudge reps early in the day and earlier in the month—keeping momentum up and forecasts on track.</p>
+      </div>
+      <div class="benefit-card"><i class="fa-solid fa-chalkboard-user"></i>
+        <h3>Free up managers to coach</h3>
+        <p>Behavior insights auto-surface trends so managers focus on conversations that matter—not chasing reports.</p>
+      </div>
+      <div class="benefit-card"><i class="fa-solid fa-repeat"></i>
+        <h3>Reinforce training, daily</h3>
+        <p>Turn static training into daily reinforcement. Nudge reps to use pitch assets exactly when needed.</p>
+      </div>
+      <div class="benefit-card"><i class="fa-solid fa-wand-magic-sparkles"></i>
+        <h3>Boost tool adoption</h3>
+        <p>Nudge reps to use sales tools right in the workflow—so adoption feels effortless, not enforced.</p>
+      </div>
+      <div class="benefit-card"><i class="fa-solid fa-heart-pulse"></i>
+        <h3>Keep reps focused & motivated</h3>
+        <p>Personalized nudges tap into individual drivers—keeping reps engaged and performance‑ready.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Callout -->
+  <section class="callout">
+    <h2>Your reps don’t need more data. They need direction.</h2>
+    <p>Turn sales goals into daily actions—with AI nudges that get reps moving.</p>
+    <a href="#contact" class="btn">Book a Demo</a>
+  </section>
+
+  <!-- Metrics -->
+  <section id="results">
+    <h2>Real sales results with worxogo</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>40%</h3>
+        <p>boost in funnel activity</p>
+      </div>
+      <div class="metric-card">
+        <h3>28%</h3>
+        <p>more reps hitting targets & 75% achieving quota</p>
+      </div>
+      <div class="metric-card">
+        <h3>40%</h3>
+        <p>improvement in lead quality & 9% revenue growth</p>
+      </div>
+      <div class="metric-card">
+        <h3>25%</h3>
+        <p>increase in channel partner activation & 2× disbursement growth</p>
+      </div>
+      <div class="metric-card">
+        <h3>12–20%</h3>
+        <p>higher outlet coverage and daily adherence</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case study -->
+  <section id="case-study">
+    <h2>Case Study</h2>
+    <div class="case-study">
+      <p>In just 12&nbsp;weeks, agents at a leading Indian FinServ company boosted quality lead closure efforts by <strong>40%</strong>, driving a <strong>40%</strong> increase in product sales and expanding their customer base by <strong>20%</strong>—all with zero additional hiring.</p>
+      <a href="https://www.worxogo.com/how-finserv-co-increased-sales-by-40/" target="_blank" rel="noopener">Read full story &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta">
+    <a href="#contact" class="btn">Talk to Sales</a>
+  </div>
+
+</body>
+</html>

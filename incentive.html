@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Incentive Nudging | worxogo</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --accent: #f97316;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --gray: #6b7280;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Inter, Helvetica, Arial, sans-serif;
+    }
+    body {
+      background: var(--light);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    section {
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1,
+    h2 {
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: var(--gray);
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+    }
+    .btn-outline {
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    .flex {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      padding: 2rem;
+      flex: 1;
+      min-width: 280px;
+    }
+    .card i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .screenshot {
+      width: 100%;
+      border-radius: 0.75rem;
+      margin-top: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    .persona {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      flex: 1;
+      min-width: 220px;
+    }
+    .persona h3 {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+    }
+    .persona ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    .persona ul li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+    .persona ul li i {
+      color: var(--accent);
+    }
+    .trust-logos img {
+      height: 40px;
+      opacity: 0.8;
+      filter: grayscale(100%);
+    }
+    @media (min-width: 768px) {
+      .hero {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+      }
+      .hero .text {
+        flex: 1;
+      }
+      .hero .media {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="text">
+      <h1>Turn Incentives into Daily Motivation</h1>
+      <p>
+        Make your incentive plans more than just targets. worxogo’s Incentive
+        Nudging helps employees track, act, and earn—every single day.
+      </p>
+      <a href="#demo" class="btn btn-primary">See Incentive Nudging in Action</a>
+      <a href="#contact" class="btn btn-outline" style="margin-left: 1rem">Book a Demo</a>
+    </div>
+    <div class="media">
+      <iframe width="100%" height="315" src="https://drive.google.com/file/d/1TjAF75Jfw5NzIuknY9FfafIG8Yhb_Z6o/preview" title="Incentive Nudging Video" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Trust Badges -->
+  <section style="padding-top: 2rem">
+    <div class="trust-logos flex" style="justify-content: center">
+      <img src="assets/logo1.png" alt="Client Logo" />
+      <img src="assets/logo2.png" alt="Client Logo" />
+      <img src="assets/logo3.png" alt="Client Logo" />
+      <img src="assets/logo4.png" alt="Client Logo" />
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem">
+    <h2>Why Great Incentive Plans Miss the Mark</h2>
+    <div class="flex">
+      <div class="card">
+        <i class="fa-solid fa-list-check"></i>
+        <p><strong>Complex plans</strong> with multiple KPIs and conditions.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-eye-slash"></i>
+        <p><strong>Lack of visibility</strong> into current earnings or shortfalls.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        <p><strong>Feedback arrives too late</strong> to make a difference.</p>
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-file-circle-check"></i>
+        <p><strong>Managers spend hours</strong> prepping reports and reviews.</p>
+      </div>
+    </div>
+    <p style="margin-top: 2rem">Your incentive system is only as effective as your team’s ability to understand—and act on—it.</p>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <h2>More Than Incentive Tracking. It’s Incentive <span style="color: var(--accent)">Coaching</span>.</h2>
+    <div class="flex">
+      <div class="card">
+        <i class="fa-solid fa-gauge-high"></i>
+        <h3>Personalized Incentive Visibility</h3>
+        <p>From monthly and quarterly schemes to special incentives, users see real-time progress toward each slab, including qualifying conditions, missed metrics, and how close they are to earning more.</p>
+        <img src="Images/incentivesummary.png" alt="Incentive Summary Screenshot" class="screenshot" loading="lazy" />
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-bell"></i>
+        <h3>AI Nudges That Guide Behavior</h3>
+        <p>The system doesn’t just show data. It nudges employees to focus on the right KPI at the right time, helping them optimize their effort to maximize incentives.</p>
+        <img src="Images/incentivenudges.png" alt="Incentive Nudges Screenshot" class="screenshot" loading="lazy" />
+      </div>
+      <div class="card">
+        <i class="fa-solid fa-calculator"></i>
+        <h3>Simulate &amp; Strategize</h3>
+        <p>With the Incentive Calculator, employees can run what-if scenarios, simulate earnings, and self-correct. Managers and admins get visual dashboards and predictive reports.</p>
+        <img src="Images/incentive.png" alt="Incentive Calculator Screenshot" class="screenshot" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Calculator Placeholder -->
+  <section id="calculator" style="background: #eef2ff; border-radius: 2rem">
+    <h2 style="text-align: center">See How Close You Are</h2>
+    <p style="text-align: center; max-width: 700px; margin: 0 auto 2rem">Move the slider to simulate KPI achievement and watch potential earnings update in real time.</p>
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <input type="range" id="kpiSlider" min="0" max="120" value="80" style="width: 60%" />
+      <p style="font-size: 1.5rem; margin-top: 1rem">Projected Incentive: <span id="incentiveValue">$3,200</span></p>
+    </div>
+  </section>
+  <script>
+    const slider = document.getElementById("kpiSlider");
+    const incentiveValue = document.getElementById("incentiveValue");
+    const base = 4000; // Example base amount
+    slider.addEventListener("input", () => {
+      incentiveValue.textContent = "$" + Math.round((base * slider.value) / 100).toLocaleString();
+    });
+  </script>
+
+  <!-- Personas -->
+  <section id="personas">
+    <h2>Incentives That Work With People, Not Just On Paper</h2>
+    <div class="flex">
+      <div class="persona">
+        <h3>Frontline Employees</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>See daily progress</li>
+          <li><i class="fa-solid fa-check"></i>Know exactly what’s missing</li>
+          <li><i class="fa-solid fa-check"></i>Make smarter decisions</li>
+        </ul>
+      </div>
+      <div class="persona">
+        <h3>Immediate Supervisors</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Track team incentive performance</li>
+          <li><i class="fa-solid fa-check"></i>Get nudges to guide coaching</li>
+          <li><i class="fa-solid fa-check"></i>Help more team members cross thresholds</li>
+        </ul>
+      </div>
+      <div class="persona">
+        <h3>Senior Leaders</h3>
+        <ul>
+          <li><i class="fa-solid fa-check"></i>Bird’s-eye view of program health</li>
+          <li><i class="fa-solid fa-check"></i>Drive better ROI from incentive spend</li>
+          <li><i class="fa-solid fa-check"></i>Spot at-risk teams early</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="demo" style="text-align: center">
+    <h2>Ready to Motivate Your Team Every Day?</h2>
+    <p>See how worxogo’s Incentive Nudging turns complex plans into clear, daily action.</p>
+    <a href="#contact" class="btn btn-primary">Request a Demo</a>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--dark); color: #fff; text-align: center; padding: 2rem 1rem; margin-top: 4rem">
+    <p>&copy; 2025 worxogo. All rights reserved.</p>
+  </footer>
+</body>
+</html>

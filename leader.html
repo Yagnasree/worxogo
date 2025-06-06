@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leader Connect – worxogo</title>
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #4f46e5; /* indigo */
+      --secondary: #0f172a; /* slate-900 */
+      --accent: #facc15;   /* amber-400 */
+      --bg: #ffffff;
+      --text: #1e293b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    h1, h2, h3 { margin: 0 0 .5em 0; font-weight: 700; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.25rem; }
+    p { margin: 0 0 1em 0; }
+    a.btn {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: .75rem 1.5rem;
+      border-radius: .5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background .2s;
+    }
+    a.btn:hover { background: #4338ca; }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 0;
+    }
+    .hero {
+      text-align: center;
+      padding: 6rem 0 4rem;
+      background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+      color: #fff;
+    }
+    .hero h1 { font-size: 3rem; }
+    .hero p { font-size: 1.25rem; max-width: 700px; margin: 1rem auto 2rem; }
+    .feature-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media(min-width: 768px) {
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .feature-img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    }
+    .three-img-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media(min-width: 640px) {
+      .three-img-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    footer {
+      background: var(--secondary);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Leader Connect</h1>
+      <p>Lead Better. Connect Deeper. Coach at Scale.</p>
+      <p class="max-w-3xl mx-auto">
+        Great leadership starts with connection. worxogo’s Leader Connect helps managers move beyond task tracking to build real‑time relationships with their teams – one conversation, one moment of feedback, one nudge at a time.
+      </p>
+      <a href="#video-demo" class="btn">See how it works</a>
+    </div>
+  </section>
+
+  <!-- Coaching Section -->
+  <section id="coaching" class="container">
+    <h2>Coach with Consistency</h2>
+    <p>Leader Connect enables direct, personalized communication all along the org hierarchy – so feedback and appreciation flow freely, even from the top.</p>
+
+    <div class="feature-grid">
+      <div>
+        <h3>Structure + Speed = Better Coaching</h3>
+        <ul>
+          <li>Find teammates instantly and view their KPI dashboards for focused feedback.</li>
+          <li>Quick team huddles made easier with fast access to daily performance snapshots.</li>
+          <li><strong>Send feedback in the flow of review—one click.</strong></li>
+          <li><strong>Celebrate success from the leaderboard in seconds.</strong></li>
+          <li><strong>Track visibility—know when your message has been read and acknowledged.</strong></li>
+        </ul>
+      </div>
+      <div class="three-img-grid">
+        <img src="Images/oneclick.png" alt="Send feedback with one click" class="feature-img">
+        <img src="Images/fromleaderboard.png" alt="Celebrate from leaderboard" class="feature-img">
+        <img src="Images/read.png" alt="Message read visibility" class="feature-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Broadcast Section -->
+  <section id="broadcast" class="container">
+    <h2>Align Teams Instantly with Broadcast</h2>
+    <div class="feature-grid">
+      <div>
+        <p>With Broadcast, leaders can quickly share important updates, process changes, or motivational messages across the team or organization. Whether it’s announcing a sales competition, rolling out a policy update, or reinforcing cultural priorities, Broadcast ensures the message shows up front and center on the employee’s app.</p>
+        <ul>
+          <li>No emails lost in inboxes.</li>
+          <li>No missed WhatsApp messages.</li>
+          <li>Just clear, timely announcements where your team already works.</li>
+        </ul>
+      </div>
+      <div>
+        <img src="Images/broadcast.png" alt="Broadcast screenshot" class="feature-img">
+      </div>
+    </div>
+  </section>
+
+  <!-- Survey Section -->
+  <section id="survey" class="container">
+    <h2>Ask. Listen. Respond.</h2>
+    <div class="feature-grid">
+      <div>
+        <img src="Images/survey.png" alt="Survey screenshot" class="feature-img">
+      </div>
+      <div>
+        <p>With Surveys, leaders can easily check the pulse of their teams – new processes, training effectiveness, onboarding experience, or anything else that needs attention. It’s a seamless, low‑friction way to listen, directly through the same app your team already uses daily.</p>
+        <ul>
+          <li>Set up and send surveys by role, team, or business unit—no IT help needed.</li>
+          <li>Nudges ensure high response rates with timely reminders.</li>
+          <li>Spot patterns: See how sentiment aligns with performance data.</li>
+          <li>Zoom in on outliers: Identify where experience differs across groups.</li>
+          <li>Take smarter action: Focus on what actually improves engagement and performance.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Demo Section -->
+  <section id="video-demo" class="container" style="text-align:center;">
+    <h2>See Leader Connect in Action</h2>
+    <!-- Replace the iframe src with your actual video link -->
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/VIDEO_ID" title="Leader Connect Demo" frameborder="0" allowfullscreen style="border-radius:1rem;box-shadow:0 10px 25px rgba(0,0,0,.1);"></iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 worxogo. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

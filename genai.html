@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Worxogo | Gen AI Suite</title>
+
+  <!-- Google Font & Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --primary:#4F46E5;         /* Indigo */
+      --primary-dark:#3730A3;
+      --accent:#06B6D4;          /* Cyan  */
+      --bg:#F9FAFB;
+      --text:#111827;
+      --radius:12px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,sans-serif;color:var(--text);}
+    body{background:var(--bg);line-height:1.55;}
+    a{color:var(--accent);text-decoration:none;}
+
+    /* ---------- HERO ---------- */
+    header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#FFF;padding:4rem 1.5rem 5rem;text-align:center;}
+    header h1{font-size:clamp(2rem,5vw,3rem);font-weight:700;margin-bottom:.75rem;}
+    header p{font-size:1.1rem;max-width:680px;margin:0 auto 1.5rem;}
+    .cta-btn{display:inline-flex;align-items:center;gap:.5rem;background:#FFF;color:var(--primary-dark);padding:.9rem 1.4rem;border-radius:var(--radius);font-weight:600;transition:all .25s;}
+    .cta-btn:hover{background:var(--accent);color:#FFF;}
+
+    /* ---------- NAV ---------- */
+    nav{position:sticky;top:0;z-index:999;background:#FFF;box-shadow:0 1px 6px rgba(0,0,0,.07);}
+    nav ul{display:flex;justify-content:center;gap:2rem;list-style:none;padding:.8rem 0;}
+    nav a{font-weight:600;color:var(--text);} nav a:hover,nav a.active{color:var(--primary);}
+
+    /* ---------- SECTIONS ---------- */
+    section{padding:4.5rem 1.5rem;max-width:1100px;margin-inline:auto;}
+    section h2{font-size:clamp(1.7rem,4vw,2.2rem);font-weight:700;margin-bottom:1.2rem;color:var(--primary-dark);}
+    .grid{display:grid;gap:2.2rem;}
+    .cols-2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));}
+    .card{background:#FFF;border-radius:var(--radius);padding:2rem;box-shadow:0 4px 12px rgba(0,0,0,.05);}
+    .card h3{font-size:1.25rem;margin:0 0 .8rem;font-weight:600;}
+    .icon{width:48px;height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent);color:#FFF;margin-right:.8rem;font-size:1.2rem;}
+    .stat{font-size:2.2rem;font-weight:700;color:var(--primary-dark);}
+    .coming{background:#FFFCEB;border-left:5px solid #FACC15;padding:1.2rem;border-radius:var(--radius);margin-bottom:2rem;}
+
+    /* ---------- FAQ ---------- */
+    .faq details{background:#FFF;border-radius:var(--radius);padding:1rem 1.4rem;margin-bottom:1rem;box-shadow:0 2px 6px rgba(0,0,0,.05);}
+    .faq summary{font-weight:600;cursor:pointer;}
+
+    /* ---------- FOOTER ---------- */
+    footer{background:#111827;color:#CBD5E1;text-align:center;padding:2.5rem 1rem;margin-top:4rem;}
+    footer a{color:#93C5FD;}
+
+    /* ---------- ANIM ---------- */
+    @media(prefers-reduced-motion:no-preference){
+      .fade-up{opacity:0;transform:translateY(20px);animation:fadeUp .8s forwards;}
+      @keyframes fadeUp{to{opacity:1;transform:none}}
+    }
+
+    /* === Performance-Insights custom styles === */
+.pi-stats     {display:flex;gap:1rem;flex-wrap:wrap;margin:1.6rem 0;}
+.pi-stat      {flex:1 1 140px;background:linear-gradient(135deg,#4F46E5 0%,#06B6D4 100%);
+               color:#FFF;padding:1.4rem;border-radius:12px;text-align:center;box-shadow:0 4px 10px rgba(0,0,0,.12);}
+.pi-stat .num {font-size:2.4rem;font-weight:700;line-height:1;}
+.pi-stat .lbl {font-size:.8rem;opacity:.9;margin-top:.4rem;}
+
+.pi-challenge {background:#FFF8E1;border-left:6px solid #FACC15;padding:1.4rem 1.6rem;border-radius:12px;
+               box-shadow:0 2px 6px rgba(0,0,0,.05);margin:1.6rem 0;}
+.pi-challenge h4{margin-bottom:.6rem;font-weight:600;}
+
+.pi-solution  {background:#FFFFFF;padding:2rem;border-radius:12px;
+               box-shadow:0 4px 14px rgba(0,0,0,.07);display:flex;flex-direction:column;gap:1.1rem;}
+.pi-solution h3{display:flex;align-items:center;gap:.6rem;font-size:1.3rem;font-weight:700;margin:0;}
+.pi-solution h3 i{background:#06B6D4;color:#FFF;padding:.55rem;border-radius:50%;}
+.pi-solution p strong{color:#4F46E5;}
+
+.ml-lead     {font-size:1.9rem;font-weight:700;margin-bottom:.8rem;color:var(--primary-dark);}
+.ml-intro    {font-size:1.05rem;margin-bottom:1.6rem;}
+
+.ml-high     {display:flex;gap:1rem;flex-wrap:wrap;margin:1.6rem 0;}
+.stat-card   {flex:1 1 200px;background:linear-gradient(135deg,#06B6D4 0%,#4F46E5 100%);
+              color:#FFF;padding:1.4rem;border-radius:var(--radius);text-align:center;
+              box-shadow:0 4px 10px rgba(0,0,0,.12);}
+.stat-card .num {font-size:2.4rem;font-weight:700;line-height:1;}
+.stat-card small{display:block;margin-top:.35rem;font-size:.8rem;opacity:.9;}
+
+.ml-box      {background:#FFF8E1;border-left:6px solid #FACC15;padding:1.4rem 1.6rem;border-radius:var(--radius);
+              box-shadow:0 2px 6px rgba(0,0,0,.05);}
+.ml-box h4   {margin-bottom:.6rem;font-weight:600;}
+
+.ml-feature  {background:#FFFFFF;padding:2rem;border-radius:var(--radius);
+              box-shadow:0 4px 14px rgba(0,0,0,.07);}
+.ml-feature h4{display:flex;align-items:center;gap:.6rem;font-size:1.15rem;font-weight:700;margin:0 0 .6rem;}
+.ml-feature h4 i{color:var(--accent);}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <header class="fade-up" style="animation-delay:.1s">
+    <h1>Gen AI that Super-charges<br>Your Managers & Their Teams</h1>
+    <p>From data-prepped performance reviews to on-demand micro-learning, Worxogo’s Gen AI Suite delivers sharper feedback, stronger engagement, and faster growth — right where work happens.</p>
+    <a href="#demo" class="cta-btn"><i class="fa-solid fa-rocket"></i>Request a Demo</a>
+  </header>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#microcoaching" class="active">Micro-Coaching</a></li>
+      <li><a href="#microlearning">Microlearning</a></li>
+      <li><a href="#trust">Responsible AI</a></li>
+      <li><a href="#demo">Get in Touch</a></li>
+    </ul>
+  </nav>
+<!-- PERFORMANCE INSIGHTS (Comprehensive Review) -->
+<section id="comprehensive" class="fade-up" style="animation-delay:.2s">
+  <h2><i class="fa-solid fa-chart-column icon"></i> Manage People, Not Spreadsheets</h2>
+
+  <!-- TOP NARRATIVE -->
+  <p>
+    <strong>Managers move the needle.</strong> Gallup’s global study
+    <em>It’s&nbsp;the&nbsp;Manager</em> (Jim Clifton, Jim Harter) shows how manager
+    interactions shape engagement and output across 160 countries.
+  </p>
+
+  <!-- STAT CARDS -->
+  <div class="pi-stats">
+    <div class="pi-stat">
+      <div class="num">75 %</div>
+      <div class="lbl">of performance is driven by managers</div>
+    </div>
+    <div class="pi-stat">
+      <div class="num">47 %</div>
+      <div class="lbl">receive feedback only a few times a year</div>
+    </div>
+    <div class="pi-stat">
+      <div class="num">26 %</div>
+      <div class="lbl">feel that feedback actually helps</div>
+    </div>
+  </div>
+
+  <!-- CHALLENGES & SOLUTION SIDE-BY-SIDE -->
+  <div class="grid cols-2">
+    <!-- Challenges -->
+    <div class="pi-challenge">
+      <h4>Why reviews break down</h4>
+      <ul style="margin-left:1rem;list-style:disc;">
+        <li><strong>Productivity drain.</strong> Data prep steals focus&nbsp;→ reviews get postponed.</li>
+        <li><strong>Fragmented feedback.</strong> Check-ins fixate on a couple of KRAs and recency bias.</li>
+        <li><strong>Subjective appraisals.</strong> Annual reviews turn into morale-sapping marathons.</li>
+      </ul>
+    </div>
+
+    <!-- Solution -->
+    <div class="pi-solution">
+      <h3><i class="fa-solid fa-robot"></i> The Solution - Performance Insights </h3>
+      <p><strong>Wingman for Managers</strong><br>
+         GenAI automates data preparation &amp; analysis so leaders can coach, not crunch.</p>
+      <p><strong>Unified Insights</strong><br>
+         GenAI generates clear visual and qualitative signals across individuals, KRAs, and whole teams — in one sleek view.</p>
+    </div>
+  </div>
+
+  <!-- DEMO VIDEO -->
+  <div style="margin-top:2.5rem;text-align:center;">
+    <iframe
+      src="https://drive.google.com/file/d/1FZzWw2nzURVt3BnphCxfmTrYPB9V8m-a/preview"
+      width="640" height="360" allow="autoplay"
+      style="max-width:620px;width:100%;border:none;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.09);">
+    </iframe>
+    <p style="margin-top:.6rem;font-size:.9rem;color:#6B7280;">
+      2-min walkthrough: raw data ➜ unified review
+    </p>
+  </div>
+</section>
+
+  <!-- MICROLEARNING -->
+  <section id="microlearning" class="fade-up" style="animation-delay:.3s">
+    <h2><i class="fa-solid fa-file-lines icon"></i> Gen AI-Powered Microlearning</h2>
+  
+    <!-- Lead -->
+    <p class="ml-lead">Reimagine Microlearning. Power it with GenAI.</p>
+    <p class="ml-intro">
+      Shorter attention spans. Faster ramp-ups. Less time to onboard.
+      GenAI + Behavioural Science turns learning into real-time performance fuel.
+    </p>
+  
+    <!-- Stat highlight -->
+    <div class="ml-high">
+      <div class="stat-card">
+        <div class="num">12 %</div>
+        <small>of employees feel their company onboards well (Gallup)</small>
+      </div>
+    </div>
+  
+    <!-- WHY it fails  vs  WHY it works -->
+    <div class="grid cols-2">
+      <!-- Challenges -->
+      <div class="ml-box">
+        <h4>Why traditional learning falls short</h4>
+        <ul style="margin-left:1rem;list-style:disc;">
+          <li><strong>Too long, too late.</strong> Training happens far from real-time performance.</li>
+          <li><strong>One-size content.</strong> Different brains, same template.</li>
+          <li><strong>Disconnected from KPIs.</strong> No link to what moves the needle at work.</li>
+          <li><strong>No feedback loop.</strong> Theory ends in slides, not on the floor.</li>
+        </ul>
+        <small style="display:block;margin-top:.8rem;font-size:.75rem;">
+          Source: “Why the Onboarding Experience Is Key for Retention,” Gallup, 2018
+        </small>
+      </div>
+  
+      <!-- Benefits -->
+      <div class="ml-feature">
+        <h4><i class="fa-solid fa-wand-sparkles"></i> Transform Knowledge into Performance – Why it Works</h4>
+        <p><strong>Adaptive Learning.</strong> Sessions flex to pace, role, and performance patterns, nudging each learner toward mastery.</p>
+        <p><strong>Autonomous, Self-led.</strong> Two-minute micro-coaching arrives in the flow of work, not after hours.</p>
+        <p><strong>Learning with Impact.</strong> Every module ties to KRAs and skills so you can see knowledge translate into outcomes.</p>
+      </div>
+    </div>
+  
+    <!-- HOW it works -->
+    <div style="margin-top:2rem;" class="grid cols-2">
+      <div class="ml-feature">
+        <h4><i class="fa-solid fa-bolt"></i> Gen AI-led Microlearning – How it Works</h4>
+        <ul style="margin-left:1rem;list-style:disc;">
+          <li><strong>Build smart content in seconds.</strong> Upload PDFs/Word docs → auto-generate role-relevant quiz questions.<br><br></li>
+          <li>Convert long docs into flashcards, summaries, and tips in <em>under two minutes</em>.<br><br></li>
+          <li>Spot weak KPIs and instantly create learning to close the gaps.</li>
+        </ul>
+      </div>
+  
+      <div class="ml-feature">
+        <h4><i class="fa-solid fa-link"></i> Tie Learning Directly to Performance</h4>
+        <ul style="margin-left:1rem;list-style:disc;">
+          <li>Deliver lessons linked to live goals, metrics, and behaviours.</li>
+          <li>Learners track application, see real-world results, and get nudged to the next module.</li>
+          <li>All in 2-minute chunks, right inside the workday.</li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- CTA + Video -->
+    <div style="margin-top:2.5rem;text-align:center;">
+      <a href="#demo" class="cta-btn" style="margin-bottom:1.4rem;"><i class="fa-solid fa-play-circle"></i>See it in action</a><br>
+      <iframe
+        src="https://drive.google.com/file/d/1WGgNYhOhcbEvXKkepU7GQEoDNwYg9sxC/preview"
+        width="640" height="360" allow="autoplay"
+        style="max-width:620px;width:100%;border:none;border-radius:var(--radius);
+               box-shadow:0 4px 16px rgba(0,0,0,.09);">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- RESPONSIBLE AI -->
+  <section id="trust" class="fade-up" style="animation-delay:.4s">
+    <h2><i class="fa-solid fa-shield-halved icon"></i> Trust & Responsible AI</h2>
+
+    <div class="grid cols-2">
+      <div class="card">
+        <h3>Security & Privacy</h3>
+        <p>ISO 27001-certified infrastructure with encryption in transit and at rest.</p>
+        <p>Role-based access controls ensure only authorised managers see employee data.</p>
+      </div>
+      <div class="card">
+        <h3>Ethical Guardrails</h3>
+        <p>All Gen AI outputs are transparently logged and auditable.</p>
+        <p>Our Behavioural-AI Ethics Charter prevents bias amplification and respects user autonomy.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq fade-up" style="animation-delay:.5s">
+    <h2><i class="fa-solid fa-circle-question icon"></i> FAQ</h2>
+
+    <details>
+      <summary>What precautions are taken before data reaches the LLM?</summary>
+      <p><strong>Data Privacy First</strong> – No private client information is sent to Azure OpenAI.<br>
+         <strong>Local Processing</strong> – Data is handled on our side pre-prompt.<br>
+         <strong>Anonymization</strong> – Identifiers are stripped before the API call.<br>
+         <strong>Aggregated Only</strong> – We transmit metrics, never raw PII/PHI.<br>
+         <strong>IP Restriction</strong> – The LLM endpoint is isolated from the public internet.<br>
+         <strong>Secure Communication</strong> – All traffic is TLS-encrypted.</p>
+    </details>
+
+    <details>
+      <summary>How is bias handled in AI outputs?</summary>
+      <p>We leverage Azure AI Security’s bias-filtering services to detect and mitigate harmful bias, ensuring fair and inclusive content.</p>
+    </details>
+
+    <details>
+      <summary>Will Gen AI replace managers?</summary>
+      <p>No. Worxogo’s AI is a co-pilot that removes grunt-work so managers can invest more time in coaching and culture-building.</p>
+    </details>
+
+    <details>
+      <summary>Is my data used to train public models?</summary>
+      <p>Never. Your data stays within our secure tenancy; foundation-model inference happens in an isolated environment.</p>
+    </details>
+
+    <details>
+      <summary>How does pricing work?</summary>
+      <p>Micro-Coaching is bundled in the Performance tier. Microlearning will be an add-on priced per active learner after GA.</p>
+    </details>
+  </section>
+
+  <!-- CTA / CONTACT -->
+  <section id="demo" class="fade-up" style="animation-delay:.6s">
+    <div class="card" style="text-align:center;">
+      <h2 style="margin-bottom:1rem;">Ready to see Gen AI in action?</h2>
+      <p style="margin-bottom:1.8rem;">Book a live demo or join the Microlearning wait-list—our team will reply within one business day.</p>
+
+      <form action="https://example.com/submit" method="POST" style="max-width:460px;margin:0 auto;">
+        <input type="text" name="name" placeholder="Your Name" required
+               style="width:100%;padding:.9rem;border:1px solid #D1D5DB;border-radius:var(--radius);margin-bottom:.9rem;">
+        <input type="email" name="email" placeholder="Work Email" required
+               style="width:100%;padding:.9rem;border:1px solid #D1D5DB;border-radius:var(--radius);margin-bottom:.9rem;">
+        <select name="interest"
+                style="width:100%;padding:.9rem;border:1px solid #D1D5DB;border-radius:var(--radius);margin-bottom:1.2rem;">
+          <option value="">I’m interested in…</option>
+          <option>Micro-Coaching Demo</option>
+          <option>Microlearning Wait-list</option>
+          <option>Both</option>
+        </select>
+        <button type="submit" class="cta-btn" style="width:100%;justify-content:center;">
+          <i class="fa-solid fa-paper-plane"></i>Submit
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Worxogo&nbsp;|&nbsp;<a href="#trust">Responsible AI</a>&nbsp;|&nbsp;<a href="mailto:info@worxogo.com">Contact&nbsp;us</a>
+  </footer>
+
+  <!-- Scroll-spy -->
+  <script>
+    const sections=document.querySelectorAll('section[id]'),
+          navLinks=document.querySelectorAll('nav a');
+    window.addEventListener('scroll',()=>{
+      const scrollY=window.pageYOffset;
+      sections.forEach(sec=>{
+        const top=sec.offsetTop-120,
+              height=sec.offsetHeight,
+              id=sec.id;
+        if(scrollY>=top && scrollY<top+height){
+          navLinks.forEach(l=>l.classList.remove('active'));
+          document.querySelector('nav a[href="#'+id+'"]').classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
